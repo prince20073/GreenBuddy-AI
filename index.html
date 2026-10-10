@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenBuddy AI helps you step away from screens with outdoor activities, a screen-free timer and AI-planned adventures.">
+    <meta name="theme-color" content="#f8f7ef">
+
+    <title>GreenBuddy AI | Touch Grass</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="GreenBuddy AI home">🌿 GreenBuddy<span>AI</span></a>
+
+        <nav aria-label="Main navigation">
+            <a href="#activities">Activities</a>
+            <a href="#challenge">Daily Challenge</a>
+            <a href="#planner">AI Planner</a>
+        </nav>
+
+        <a href="#planner" class="nav-button">Explore Nature ↗</a>
+    </header>
+
+    <main id="main">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">🌱 YOUR PERSONAL NATURE COMPANION</span>
+
+                <h1>Life is better<br><span>outside.</span></h1>
+
+                <p>
+                    Step away from your screen and reconnect with the world.
+                    Let AI help you discover your next outdoor adventure.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#planner" class="primary-button">Plan My Adventure →</a>
+                    <a href="#activities" class="secondary-button">Explore Activities</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong id="completedCount">0</strong>
+                        <span>Activities completed today</span>
+                    </div>
+                    <div>
+                        <strong id="minutesCount">0</strong>
+                        <span>Minutes outdoors today</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="mountain mountain-back"></div>
+                <div class="mountain mountain-front"></div>
+
+                <div class="hero-card">
+                    <span>🌿 TODAY'S REMINDER</span>
+                    <h3>Your world is waiting.</h3>
+                    <p>Take a breath. Go outside. Feel alive.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section" id="activities">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FIND YOUR NEXT ADVENTURE</span>
+                    <h2>Choose your way outside.</h2>
+                </div>
+                <p>Small adventures can make a big difference.</p>
+            </div>
+
+            <div class="activity-grid">
+                <article class="activity-card">
+                    <div class="activity-icon" aria-hidden="true">🚶</div>
+                    <span class="activity-time">20 MINUTES</span>
+                    <h3>Mindful Walking</h3>
+                    <p>Clear your mind with a peaceful outdoor walk.</p>
+                    <button type="button" class="activity-button" data-activity="Mindful Walking" data-minutes="20">
+                        Try this activity →
+                    </button>
+                </article>
+
+                <article class="activity-card">
+                    <div class="activity-icon" aria-hidden="true">🌱</div>
+                    <span class="activity-time">30 MINUTES</span>
+                    <h3>Gardening</h3>
+                    <p>Connect with nature by planting or caring for a plant.</p>
+                    <button type="button" class="activity-button" data-activity="Gardening" data-minutes="30">
+                        Try this activity →
+                    </button>
+                </article>
+
+                <article class="activity-card">
+                    <div class="activity-icon" aria-hidden="true">🐦</div>
+                    <span class="activity-time">15 MINUTES</span>
+                    <h3>Bird Watching</h3>
+                    <p>Notice the birds, their calls, and their movements.</p>
+                    <button type="button" class="activity-button" data-activity="Bird Watching" data-minutes="15">
+                        Try this activity →
+                    </button>
+                </article>
+
+                <article class="activity-card">
+                    <div class="activity-icon" aria-hidden="true">🥾</div>
+                    <span class="activity-time">45 MINUTES</span>
+                    <h3>Nature Explorer</h3>
+                    <p>Discover a nearby park or a safe nature trail.</p>
+                    <button type="button" class="activity-button" data-activity="Nature Exploration" data-minutes="45">
+                        Try this activity →
+                    </button>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="challenge-section" id="challenge">
+            <div class="challenge-content">
+                <span class="eyebrow">YOUR DAILY DOSE OF NATURE</span>
+
+                <h2 id="challengeTitle">Today's challenge:<br>Touch Grass 🌿</h2>
+
+                <p id="challengeText">
+                    Spend 20 minutes outside without scrolling through
+                    social media. Notice five things you can see in nature.
+                </p>
+
+                <div class="challenge-meta">
+                    <span id="challengeDuration">⏱ 20 minutes</span>
+                    <span>🌳 Beginner friendly</span>
+                </div>
+
+                <button type="button" class="primary-button" id="startChallenge">
+                    Start My Challenge →
+                </button>
+            </div>
+
+            <div class="timer-card">
+                <span class="timer-label">SCREEN-FREE SESSION</span>
+
+                <div class="timer-circle" id="timerCircle" role="timer" aria-label="Countdown timer">
+                    <span id="timerDisplay">20:00</span>
+                </div>
+
+                <p id="timerStatus" aria-live="polite">Ready when you are.</p>
+
+                <div class="timer-buttons">
+                    <button type="button" id="pauseTimer" disabled>Pause</button>
+                    <button type="button" id="resetTimer">Reset</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section planner-section" id="planner">
+            <div class="planner-intro">
+                <span class="eyebrow">POWERED BY OPEN-WEIGHT AI</span>
+
+                <h2>Your next adventure,<br>planned intelligently.</h2>
+
+                <p>
+                    Tell GreenBuddy what you enjoy, and get a personalized
+                    outdoor activity plan.
+                </p>
+
+                <div class="privacy-note">
+                    🔒 Designed for local AI with Ollama.
+                    Your prompts can stay on your computer.
+                </div>
+            </div>
+
+            <div class="planner-card">
+                <label for="mood">How are you feeling today?</label>
+                <select id="mood">
+                    <option value="relaxed">I want to relax</option>
+                    <option value="energetic">I feel energetic</option>
+                    <option value="stressed">I feel stressed</option>
+                    <option value="curious">I want to explore</option>
+                </select>
+
+                <label for="duration">How much time do you have?</label>
+                <select id="duration">
+                    <option value="15">15 minutes</option>
+                    <option value="30" selected>30 minutes</option>
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                </select>
+
+                <label for="locationType">Where would you like to go?</label>
+                <select id="locationType">
+                    <option value="garden">Garden</option>
+                    <option value="park">Park</option>
+                    <option value="neighborhood">Neighborhood</option>
+                    <option value="nature">Nature trail</option>
+                    <option value="home">At home or in the yard</option>
+                </select>
+
+                <button type="button" class="primary-button generate-button" id="generatePlan">
+                    ✨ Generate My Adventure
+                </button>
+
+                <div class="ai-result" id="aiResult" aria-live="polite">
+                    <span>🌿 YOUR ADVENTURE AWAITS</span>
+                    <p>
+                        Your personalized plan will appear here.
+                        Connect Ollama to enable AI-generated plans.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="progress-section">
+            <div>
+                <span class="eyebrow">EVERY STEP COUNTS</span>
+                <h2>Your nature journey.</h2>
+                <p>Every minute outside is a small win.</p>
+            </div>
+
+            <div class="progress-card">
+                <div class="progress-number" id="progressPercent">0%</div>
+
+                <div class="progress-info">
+                    <h3>Today's outdoor goal</h3>
+                    <p id="progressText">0 of 30 minutes completed</p>
+
+                    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack" aria-label="Daily outdoor goal">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="secondary-button" id="logActivity">
+                + Log 10 outdoor minutes
+            </button>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a href="#" class="logo">🌿 GreenBuddy<span>AI</span></a>
+        <p>Built to help you disconnect from screens and reconnect with nature.</p>
+        <span>Made with 💚 for the Touch Grass challenge.</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
